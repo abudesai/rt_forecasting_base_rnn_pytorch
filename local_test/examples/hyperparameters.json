@@ -1,0 +1,7 @@
+{
+  "max_hist_len_multiple_of_fcst_len": 5,
+  "latent_dim": 100,
+  "rnn_unit": "lstm",
+  "activation": "tanh",
+  "bidirectional": true
+}

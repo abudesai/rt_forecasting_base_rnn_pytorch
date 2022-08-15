@@ -1,0 +1,59 @@
+{
+  "default_fnames": {
+    "def_train_fname": "train.csv",
+    "def_test_fname": "test.csv",
+    "def_schema_fname": "input_schema.json",
+    "preprocessor_fname": "preprocessor.save",
+    "predictions_fname": "predictions.csv",
+    "processed_history": "processed_history.npz"
+  },
+  "pp_params": {
+    "pp_step_names": {
+      "DUMMY_COL_CREATOR": "dummy_col_creator",
+      "ROW_ID_CACHER": "row_id_cacher",
+      "STRING_TYPE_CASTER": "string_type_caster",
+      "FLOAT_TYPE_CASTER": "float_type_caster",
+      "DATETIME_TYPE_CASTER": "datetime_type_caster",
+      "DATETIME_TYPE_CASTER2": "datetime_type_caster2",
+      "MISSING_VALUE_TAGGER": "missing_value_tagger",
+      "MISSING_INTERVAL_FILLER": "missing_interval_filler",
+      "NA_FILLER": "na_filler",
+      "NA_FILLER_USING_SUBSTRING": "NA_Filler_using_substring",
+      "COLUMNS_SELECTOR": "columns_selector",
+      "EPOCH_RESETTER": "epoch_resetter",
+      "VALUE_AGGREGATOR": "value_aggregator",
+      "SP_EVENTS_NEIGH_MARKER": "sp_events_neighborhood_marker",
+      "SP_EVENTS_OHE": "sp_events_ohencoder",
+      "RESHAPER_TO_THREE_D": "reshape_to_3d",
+      "SERIES_SUBSAMPLER": "series_subsampling",
+      "LEFT_RIGHT_FLIPPER": "series_left_right_flipper",
+      "SERIES_TRIMMER": "series_length_trimmer",
+      "MINMAX_SCALER": "min_max_scaler",
+      "XY_SPLITTER": "xy_splitter"
+    }
+  },
+  "data_schema_keys": {
+    "attributes": "attributes",
+    "id_field": "idField",
+    "target_attr_name": "targetField",
+    "categorical": "CATEGORICAL",
+    "numeric": "NUMERIC",
+    "attr_type": "attributeType",
+    "attr_name": "attributeName"
+  },
+  "model_outputs": {
+    "preds_col_name": "predictionFieldName"
+  },
+  "valid_split": 0.1,
+  "se_flag": "__sp_event__",
+  "regular_epoch_flag": "__regular__",
+  "se_epochs_before": 2,
+  "se_epochs_after": 2,
+  "se_epochs_before_suffix": "_minus_",
+  "se_epochs_after_suffix": "_plus_",
+  "exog_col_prefix": "__exog__",
+  "missing_val_field": "__exog__missing__",
+  "not_missing_val": "NA",
+  "num_subsampling_reps": 10,
+  "scaler_max_bound": 3.5
+}

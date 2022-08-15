@@ -1,0 +1,46 @@
+[
+  {
+    "name": "max_hist_len_multiple_of_fcst_len",
+    "short_desc": "Multiplier that determines max length of history for training. Value = 3 means history_len is 3x fcst_len.",
+    "default": 4,
+    "type": "int",
+    "range_low": 3,
+    "range_high": 6,
+    "search_type": "uniform",
+    "run_HPO": true
+  },
+  {
+    "name": "activation",
+    "short_desc": "Activation function in hidden layers of the neural network. One of two types: [ 'relu', 'tanh' ]",
+    "default": "tanh",
+    "type": "categorical",
+    "categorical_vals": ["relu", "tanh"],
+    "run_HPO": true
+  },
+  {
+    "name": "rnn_unit",
+    "short_desc": "RNN unit to use. One of [ 'lstm', 'gru', 'simple']. Casing doesnt matter.",
+    "default": "lstm",
+    "type": "categorical",
+    "categorical_vals": ["lstm", "gru", "simple"],
+    "run_HPO": true
+  },
+  {
+    "name": "latent_dim",
+    "short_desc": "Latent dimension for rnn unit",
+    "default": 50,
+    "type": "int",
+    "range_low": 20,
+    "range_high": 120,
+    "search_type": "uniform",
+    "run_HPO": true
+  },
+  {
+    "name": "bidirectional",
+    "short_desc": "Boolean indicator to use bidirectional. This is possible because we dont pass forecast horizon target values except for exogenous series. One of two types: [ true, false ]",
+    "default": true,
+    "type": "categorical",
+    "categorical_vals": [true, false],
+    "run_HPO": true
+  }
+]
